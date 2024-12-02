@@ -1,0 +1,342 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>5G Use Cases: Virtual Reality (VR) | Explore 5G Education</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+    <style>
+      html,body,h1,h2,h3,h4,h5,h6 {font-family: "Rubik", sans-serif;}
+      .center{text-align: center;}
+      body p {line-height: 1.8;}
+      h1 {
+      color: #1e9d94;
+      transition: color 0.3s ease-in-out;
+      }
+      h2 {
+      color: #1e9d94;
+      transition: color 0.3s ease-in-out;
+      }
+      h3 {
+      color: #1e9d94;
+      transition: color 0.3s ease-in-out;
+      }
+      .no-underline { 
+      text-decoration: none; 
+      }
+
+      /*Dropdown Menu*/
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      li {
+        float: left;
+      }
+      li.right {
+      display: flex; 
+      align-items: center;
+      }
+      li a, .dropbtn, label {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      li a:hover, .dropdown:hover .dropbtn {
+        background-color: white;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      li.dropdown {
+        display: block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        transition: background-color 0.3s;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        transition: color 0.3s;
+      }
+      .dropdown-content a:hover {
+      background-color: #f1f1f1;
+      transition: background-color 0.3s;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /*Banner Image*/
+      .banner {
+      width: 100%;
+      height: 325px;
+      background-image: url('5G Education.png');
+      background-repeat: no-repeat;
+      background-size: 26% 100%;
+      background-position: center;
+      background-color: #1e9d94;
+      }
+
+      /*Info Template*/
+      .info-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      /*Uploaded Images*/
+      .image1 {
+      width: 100%;
+      height: 350px;
+      background-image: url('usecases.png');
+      background-size: 100% 100%;
+      background-position: center;
+      }
+
+      /*Dark Mode Switch*/
+      .switch {
+          position: relative;
+          display: inline-block;
+          width: 55px;
+          height: 26px;
+      }
+      /* Hide default HTML checkbox */
+      .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+      }
+      /* The slider */
+      .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #333333;
+          transition: .4s;
+          border-radius: 20px;
+      }
+      .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 3px;
+          bottom: 2px;
+          background-color: white;
+          transition: .4s;
+          border-radius: 50%;
+      }
+      input:checked + .slider {
+          background-color: #66d6cf;
+      }
+      input:checked + .slider:before {
+          transform: translateX(24px);
+      }
+      /* Rounded sliders */
+      .slider.round {
+          border-radius: 34px;
+      }
+      .slider.round:before {
+          border-radius: 50%;
+      }
+
+      /*Body + Nav in Dark Mode*/
+      ul {
+      background-color: black;
+      transition: background-color 0.3s;
+      }
+      .dark-mode ul {
+      background-color: #121212;
+      }
+      .dark-mode li a, .dark-mode .dropbtn {
+      color: #e0e0e0;
+      }
+      .dark-mode li a:hover, .dark-mode .dropdown:hover .dropbtn {
+      background-color: #333;
+      color: #ffffff;
+      }
+      .dark-mode .dropdown-content{
+      background-color: #333;
+      }
+      .dark-mode .dropdown-content a{
+      color: #e0e0e0;
+      }
+      .dark-mode .dropdown-content a:hover { 
+      background-color: #555;
+      }
+      
+      body {
+      background-color: white;
+      color: black;
+      transition: background-color 0.3s, color 0.3s;
+      }
+      .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+      }
+      .dark-mode .info-container {
+      box-shadow: 0 0 10px white;
+      }
+      .dark-mode h1, .dark-mode h2, .dark-mode h3 {
+      color: #66d6cf;
+      }
+    </style>
+  </head>
+  <body onload="checkDarkMode()">
+    <div class="w3-top"><!--Navigation Bar-->
+        <div class="w3-theme w3-top w3-left-align w3-large">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="4gvs5g.html">4G vs 5G</a></li>
+                <li><a href="Impact.html">Impact</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Challenges</a>
+                    <div class="dropdown-content">
+                    <a href="DD.html">The Digital Divide</a>
+                    <a href="Security.html">Security Risks</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Use Cases</a>
+                    <div class="dropdown-content">
+                    <a href="VR.html">Virtual Reality (VR)</a>
+                    <a href="Learning.html">Remote & Hybrid Learning</a>
+                    </div>
+                </li>
+                <li><a href="Future.html">Future</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="FAQ.html">FAQs</a></li>
+               
+                <li class="right"> 
+                  <label class="switch"> 
+                    <input type="checkbox" id="togglebutton" class="w3-container w3-bar-item button w3-button w3-hide-small w3-hover-white">
+                    <span class="slider round"></span> 
+                  </label> 
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner"></div>
+
+    <div class="w3-main">
+
+        <div class="w3-row w3-padding-32">
+          <div class="w3-container info-container">
+            <h1 class="center">5G Use Cases: Virtual Reality (VR)</h1>
+            <div class="w3-container">
+              <p class="w3-padding-large w3-padding-32 w3-center image1"></p>
+              <p class="center"><sub>Image by: Microsoft. (2024). <i>Microsoft Copilot (Version 1.0)</i>. Microsoft. <a href="https://copilot.microsoft.com/">https://copilot.microsoft.com/</a></sub></p>
+            </div>
+            <h2>Transforming Education with Virtual Reality (VR)</h2>
+            <p>Thanks to 5G's low latency and high bandwidth, seamless and immersive VR experiences are now possible, 
+              revolutionizing education. Students can engage in interactive learning environments, such as virtual field trips, 
+              simulations, and hands-on activities that were previously impossible or impractical. According to Built In (2023), 
+              VR in education enhances learning by providing students with access to virtual environments where they can engage 
+              with immersive content from a range of subjects. For more insights, here are two YouTube videos that share 
+              these experiences.</p>
+            
+            <h3>Reuters: Transforming Education with VR in the Metaverse</h3>
+            <p class="center"><iframe width="650" height="310" 
+            src="https://www.youtube.com/embed/4nwQ36m9aDE" title="&#39;Metaverse school&#39; teaches students using VR" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+            <p>This video highlights how students at Reddam House School in Berkshire, England, are leveraging VR headsets to enter 
+              the 'metaverse' for interactive lessons. Through VR technology, students can engage in immersive educational experiences, 
+              such as virtual field trips and interactive simulations, making learning more dynamic and engaging. The use of VR in the 
+              classroom aims to enhance students' understanding and retention of information by offering a more hands-on and interactive 
+              approach to education.</p>
+
+            
+            <h3>SimLab Soft: How VR Transforms Learning Experiences</h3>
+            <p class="center"><iframe width="650" height="310" 
+            src="https://www.youtube.com/embed/GT2kYCX9wNs" title="Immersive Learning Experiences: How VR Transforms Education" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+            <p>This video explores how VR is revolutionizing education by creating engaging and interactive learning experiences. 
+              It demonstrates how VR technology enables students to embark on virtual field trips, participate in simulations, and 
+              engage in hands-on activities, all of which enhance their comprehension and retention of information. The video also 
+              underscores the potential of VR to transform traditional classrooms into dynamic and immersive environments, making 
+              learning more interactive and captivating for students.</p>
+          </div>
+        </div>
+
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-24">
+            <sub><b>References</b></sub><br>
+            <sub>Gossett, S. (2023, March 22). <i>Virtual Reality in Education: Benefits, Uses & Examples</i> (R. Velazquez, Ed.). Built In. 
+              <a href="https://builtin.com/articles/virtual-reality-in-education">
+              https://builtin.com/articles/virtual-reality-in-education</a></sub><br>
+
+            <sub>SimLab Soft. (2023, Jul 30). <i>Immersive Learning Experiences: How VR Transforms Education</i> [Video]. YouTube.
+              <a href="https://www.youtube.com/watch?v=GT2kYCX9wNs">
+              https://www.youtube.com/watch?v=GT2kYCX9wNs</a></sub><br>
+            
+            <sub>Reuters. (2023, May 23). <i>'Metaverse School' teaches students using VR</i> [Video]. YouTube.
+              <a href="https://www.youtube.com/watch?v=4nwQ36m9aDE">
+              https://www.youtube.com/watch?v=4nwQ36m9aDE</a></sub>
+        </div>
+
+          <div class="w3-container w3-theme-l1">
+            <p>2024 Senior Capstone</p>
+            <p>Made by <a href="mailto:kaneses24@arizona.edu" target="_blank" class="no-underline">Kat Aneses</a></p>
+          </div>
+      </footer>
+      
+    </div><!--End of Main-->
+
+    <script>
+    const toggleButton = document.getElementById('togglebutton'); 
+    
+    toggleButton.addEventListener('click', () => { 
+      document.body.classList.toggle('dark-mode'); 
+      if (document.body.classList.contains('dark-mode')) { 
+          localStorage.setItem('dark-mode', 'enabled'); 
+      } else { 
+          localStorage.removeItem('dark-mode'); 
+      } 
+    }); 
+    
+    function checkDarkMode() { 
+      if (localStorage.getItem('dark-mode') === 'enabled') { 
+          document.body.classList.add('dark-mode');
+          toggleButton.checked = true; 
+      } else {
+          document.body.classList.remove('dark-mode');
+          toggleButton.checked = false;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', checkDarkMode); 
+    </script>
+  </body>
+</html>
