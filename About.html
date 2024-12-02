@@ -1,0 +1,324 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About | Explore 5G Education</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+    <style>
+      html,body,h1,h2,h3,h4,h5,h6 {font-family: "Rubik", sans-serif;}
+      .center{text-align: center;}
+      body p {line-height: 1.8;}
+      h1 {
+      color: #1e9d94;
+      transition: color 0.3s ease-in-out;
+      }
+      h2 {
+      color: #1e9d94;
+      transition: color 0.3s ease-in-out;
+      }
+      .no-underline { 
+      text-decoration: none; 
+      }
+
+      /*Dropdown Menu*/
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      li {
+        float: left;
+      }
+      li.right {
+      display: flex; 
+      align-items: center;
+      }
+      li a, .dropbtn, label {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      li a:hover, .dropdown:hover .dropbtn {
+        background-color: white;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      li.dropdown {
+        display: block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        transition: background-color 0.3s;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        transition: color 0.3s;
+      }
+      .dropdown-content a:hover {
+      background-color: #f1f1f1;
+      transition: background-color 0.3s;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /*Ordered List*/
+      ol {
+        list-style: decimal inside;
+        margin-left: 20px;
+        padding-left: 0;
+      }
+      ol li {
+        text-align: left;
+       margin: 5px 0;
+      }
+
+
+      /*Banner Image*/
+      .banner {
+      width: 100%;
+      height: 325px;
+      background-image: url('5G Education.png');
+      background-repeat: no-repeat;
+      background-size: 26% 100%;
+      background-position: center;
+      background-color: #1e9d94;
+      }
+
+      /*Info Template*/
+      .info-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      /*Uploaded Images*/
+      .image1 {
+      width: 100%;
+      height: 350px;
+      background-image: url('HomeImage.png');
+      background-size: 100% 100%;
+      background-position: center;
+      }
+
+      /*Dark Mode Switch*/
+      .switch {
+          position: relative;
+          display: inline-block;
+          width: 55px;
+          height: 26px;
+      }
+      /* Hide default HTML checkbox */
+      .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+      }
+      /* The slider */
+      .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #333333;
+          transition: .4s;
+          border-radius: 20px;
+      }
+      .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 3px;
+          bottom: 2px;
+          background-color: white;
+          transition: .4s;
+          border-radius: 50%;
+      }
+      input:checked + .slider {
+          background-color: #37b0a7;
+      }
+      input:checked + .slider:before {
+          transform: translateX(24px);
+      }
+      /* Rounded sliders */
+      .slider.round {
+          border-radius: 34px;
+      }
+      .slider.round:before {
+          border-radius: 50%;
+      }
+
+      /*Body + Nav in Dark Mode*/
+      ul {
+      background-color: black;
+      transition: background-color 0.3s;
+      }
+      .dark-mode ul {
+      background-color: #121212;
+      }
+      .dark-mode li a, .dark-mode .dropbtn {
+      color: #e0e0e0;
+      }
+      .dark-mode li a:hover, .dark-mode .dropdown:hover .dropbtn {
+      background-color: #333;
+      color: #ffffff;
+      }
+      .dark-mode .dropdown-content{
+      background-color: #333;
+      }
+      .dark-mode .dropdown-content a{
+      color: #e0e0e0;
+      }
+      .dark-mode .dropdown-content a:hover { 
+      background-color: #555;
+      }
+
+      body {
+      background-color: white;
+      color: black;
+      transition: background-color 0.3s, color 0.3s;
+      }
+      .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+      }
+      .dark-mode .info-container {
+      box-shadow: 0 0 10px white;
+      }
+      .dark-mode h1, .dark-mode h2 {
+      color: #66d6cf;
+      }
+    </style>
+  </head>
+<body onload="checkDarkMode()">
+<div class="w3-top"><!-- Navigation bar -->
+  <div class="w3-theme w3-top w3-left-align w3-large">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="4gvs5g.html">4G vs 5G</a></li>
+                <li><a href="Impact.html">Impact</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Challenges</a>
+                    <div class="dropdown-content">
+                    <a href="DD.html">The Digital Divide</a>
+                    <a href="Security.html">Security Risks</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Use Cases</a>
+                    <div class="dropdown-content">
+                    <a href="VR.html">Virtual Reality (VR)</a>
+                    <a href="Learning.html">Remote & Hybrid Learning</a>
+                    </div>
+                </li>
+                <li><a href="Future.html">Future</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="FAQ.html">FAQs</a></li>
+
+                <li class="right"> 
+                  <label class="switch"> 
+                    <input type="checkbox" id="togglebutton" class="w3-container w3-bar-item button w3-button w3-hide-small w3-hover-white">
+                    <span class="slider round"></span> 
+                  </label> 
+                </li>
+            </ul>
+    </div>
+</div>
+
+<!-- Banner -->
+<div class="banner"></div>
+
+
+<!-- Main content -->
+<div class="w3-main">
+
+  <div class="w3-row w3-padding-32">
+    <div class="w3-container info-container">
+      <h1 class="center">About</h1>
+      <div class="w3-container">
+        <p class="w3-padding-large w3-padding-32 w3-center image1"></p>
+        <p class="center"><sub>Image by: Microsoft. (2024). <i>Microsoft Copilot (Version 1.0)</i>. Microsoft. <a href="https://copilot.microsoft.com/">https://copilot.microsoft.com/</a></sub></p>
+      </div>
+      <h2>Welcome to Our 5G Education Hub</h2>
+        <p>Discover how 5G technology is transforming the educational landscape. 
+          Our mission is to empower educators, students, and tech enthusiasts with cutting-edge insights into the 
+          revolutionary impact of 5G on teaching and learning. Explore a wealth of information, including:</p>
+        <p>
+        &#9900; A comprehensive overview of 5G technology<br>
+        &#9900; Comparisons between 4G and 5G<br>
+        &#9900; The significant impact of 5G on education<br>
+        &#9900; Challenges and considerations of adopting 5G<br>
+        &#9900; Use cases showcasing real-world applications<br>
+        &#9900; The future potential of 5G<br>
+        &#9900; Frequently Asked Questions (FAQs)
+        </p>
+
+        <p>Join us on this journey as we delve into the innovative world of 5G in education, 
+          unlocking new possibilities for the future of learning.</p>
+    </div>
+  </div>
+
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l1">
+      <p>2024 Senior Capstone</p>
+      <p>Made by <a href="mailto:kaneses24@arizona.edu" target="_blank" class="no-underline">Kat Aneses</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+
+<script>
+    const toggleButton = document.getElementById('togglebutton'); 
+    
+    toggleButton.addEventListener('click', () => { 
+      document.body.classList.toggle('dark-mode'); 
+      if (document.body.classList.contains('dark-mode')) { 
+          localStorage.setItem('dark-mode', 'enabled'); 
+      } else { 
+          localStorage.removeItem('dark-mode'); 
+      } 
+    }); 
+    
+    function checkDarkMode() { 
+      if (localStorage.getItem('dark-mode') === 'enabled') { 
+          document.body.classList.add('dark-mode');
+          toggleButton.checked = true; 
+      } else {
+          document.body.classList.remove('dark-mode');
+          toggleButton.checked = false;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', checkDarkMode); 
+    </script>
+</body>
+</html>
