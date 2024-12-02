@@ -1,0 +1,397 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>4G vs 5G | Explore 5G Education</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+    <style>
+      html,body,h1,h2,h3,h4,h5,h6 {font-family: "Rubik", sans-serif;}
+      .center{text-align: center;}
+      body p {line-height: 1.8;}
+      h1 {
+      color: #1e9d94;
+      transition: color 0.3s ease-in-out;
+      }
+      h2 {
+      color: #1e9d94;
+      transition: color 0.3s ease-in-out;
+      }
+      .no-underline { 
+      text-decoration: none; 
+      }
+
+      /*Dropdown Menu*/
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      li {
+        float: left;
+      }
+      li.right {
+      display: flex; 
+      align-items: center;
+      }
+      li a, .dropbtn, label {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      li a:hover, .dropdown:hover .dropbtn {
+        background-color: white;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      li.dropdown {
+        display: block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        transition: background-color 0.3s;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        transition: color 0.3s;
+      }
+      .dropdown-content a:hover {
+      background-color: #f1f1f1;
+      transition: background-color 0.3s;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /*Banner Image*/
+      .banner {
+      width: 100%;
+      height: 325px;
+      background-image: url('5G Education.png');
+      background-repeat: no-repeat;
+      background-size: 26% 100%;
+      background-position: center;
+      background-color: #1e9d94;
+      }
+
+      /*Info Template*/
+      .info-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      /*Pros & Cons Table*/
+      table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      } 
+      th, td { 
+      border: 1px solid #ddd; 
+      padding: 8px; 
+      } 
+      th { 
+      background-color: #1e9d94;
+      transition: background-color 0.3s ease-in-out; 
+      }
+
+      /*Uploaded Images*/
+      .image1 {
+      width: 100%;
+      height: 350px;
+      background-image: url('ThinkingStudent2.png');
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      }
+
+      /*Dark Mode Switch*/
+      .switch {
+          position: relative;
+          display: inline-block;
+          width: 55px;
+          height: 26px;
+      }
+      /* Hide default HTML checkbox */
+      .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+      }
+      /* The slider */
+      .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #333333;
+          transition: .4s;
+          border-radius: 20px;
+      }
+      .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 3px;
+          bottom: 2px;
+          background-color: white;
+          transition: .4s;
+          border-radius: 50%;
+      }
+      input:checked + .slider {
+          background-color: #66d6cf;
+      }
+      input:checked + .slider:before {
+          transform: translateX(24px);
+      }
+      /* Rounded sliders */
+      .slider.round {
+          border-radius: 34px;
+      }
+      .slider.round:before {
+          border-radius: 50%;
+      }
+
+      /*Body + Nav in Dark Mode*/
+      ul {
+      background-color: black;
+      transition: background-color 0.3s;
+      }
+      .dark-mode ul {
+      background-color: #121212;
+      }
+      .dark-mode li a, .dark-mode .dropbtn {
+      color: #e0e0e0;
+      }
+      .dark-mode li a:hover, .dark-mode .dropdown:hover .dropbtn {
+      background-color: #333;
+      color: #ffffff;
+      }
+      .dark-mode .dropdown-content{
+      background-color: #333;
+      }
+      .dark-mode .dropdown-content a{
+      color: #e0e0e0;
+      }
+      .dark-mode .dropdown-content a:hover { 
+      background-color: #555;
+      }
+      
+      body {
+      background-color: white;
+      color: black;
+      transition: background-color 0.3s, color 0.3s;
+      }
+      .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+      }
+      .dark-mode .info-container {
+      box-shadow: 0 0 10px white;
+      }
+      .dark-mode h1, .dark-mode h2 {
+      color: #66d6cf;
+      }
+    </style>
+  </head>
+<body onload="checkDarkMode()">
+  <div class="w3-top"><!-- Navbar -->
+    <div class="w3-theme w3-top w3-left-align w3-large">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="4gvs5g.html">4G vs 5G</a></li>
+                <li><a href="Impact.html">Impact</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Challenges</a>
+                    <div class="dropdown-content">
+                    <a href="DD.html">The Digital Divide</a>
+                    <a href="Security.html">Security Risks</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Use Cases</a>
+                    <div class="dropdown-content">
+                    <a href="VR.html">Virtual Reality (VR)</a>
+                    <a href="Learning.html">Remote & Hybrid Learning</a>
+                    </div>
+                </li>
+                <li><a href="Future.html">Future</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="FAQ.html">FAQs</a></li>
+
+                <li class="right"> 
+                  <label class="switch"> 
+                    <input type="checkbox" id="togglebutton" class="w3-container w3-bar-item button w3-button w3-hide-small w3-hover-white">
+                    <span class="slider round"></span> 
+                  </label> 
+                </li>
+            </ul>
+    </div>
+  </div>
+
+<!-- Banner -->
+<div class="banner"></div>
+
+
+<!-- Main content -->
+<div class="w3-main">
+
+  <div class="w3-row w3-padding-32">
+    <div class="w3-container info-container">
+      <h1 class="center">4G vs 5G</h1>
+      <div class="w3-container">
+        <p class="w3-padding-large w3-padding-32 w3-center image1"></p>
+        <p class="center"><sub>Image by: Microsoft. (2024). <i>Microsoft Copilot (Version 1.0)</i>. Microsoft. <a href="https://copilot.microsoft.com/">https://copilot.microsoft.com/</a></sub></p>
+      </div>
+      <h2>Difference Between 4G and 5G</h2>
+      <p>4G (fourth generation) and 5G (fifth generation) are both standards for mobile networks, 
+        but they differ significantly in terms of speed, latency, and coverage (Jansen & Beaton, 2019).</p>
+        
+      <p>Moreover, 4G networks use radio waves to transmit data, operating on the low-frequency radio wave spectrum (Verizon, n.d.). 
+      This allows for decent speeds and coverage, but it has limitations in terms of the number of devices it can 
+      support and the speed at which data can be transmitted.</p>
+      
+      <p>On the other hand, 5G networks incorporate new technology and higher radio frequencies, which enable much faster 
+      data transmission and lower latency (Holslin, 2024). 5G networks also use a variety of frequencies, including low-band, mid-band, 
+      and high-band (mmWave), to provide more reliable coverage and support for a larger number of devices. This makes 5G networks 
+      more efficient and capable of handling more data-intensive applications, such as streaming high-definition videos, online gaming, 
+      and the Internet of Things (IoT) (Hudson, 2024).</p>
+
+      <h2>Which is Better and Why?</h2>
+      <p>5G is generally considered better than 4G because it offers significantly higher speeds and lower latency (Hudson, 2024). 
+        This means that data can be transmitted and received much faster, resulting in smoother and more responsive online experiences. 
+        Additionally, 5G networks can support a larger number of devices simultaneously, making them more suitable for modern, 
+        connected environments (Hudson, 2024).</p>
+        
+      <p>The improved speed and capacity of 5G also enable new applications and services that were not possible with 4G, such as 
+      autonomous vehicles, remote surgery, and smart cities. While 4G is still widely used and provides adequate performance for 
+      many applications, 5G represents a significant advancement in mobile network technology.</p>
+
+      <h2>The Pros and Cons</h2>
+
+      <table> 
+        <tr> 
+          <th>Aspect</th> <th>4G</th> <th>5G</th> 
+        </tr> 
+        <tr> 
+          <td>Speed</td> 
+          <td>Up to 1Gbps (LTE-A)</td> 
+          <td>Up to 10Gbps</td> 
+        </tr> 
+        <tr> 
+          <td>Latency</td> 
+          <td>Higher Latency</td> 
+          <td>Lower Latency</td> 
+        </tr>
+        <tr> 
+          <td>Coverage</td> 
+          <td>Good coverage, especially in urban areas</td> 
+          <td>Better coverage, including rural areas</td> 
+        </tr> 
+        <tr> 
+          <td>Device Support</td> 
+          <td>Supports fewer devices</td> 
+          <td>Supports more devices</td> 
+        </tr> 
+        <tr> 
+          <td>Energy Efficiency</td> 
+          <td>Less energy-efficient</td> 
+          <td>More energy-efficient</td> 
+        </tr> 
+        <tr> 
+          <td>Cost</td> 
+          <td>Generally cheaper</td> 
+          <td>More expensive</td> 
+        </tr> 
+        <tr> 
+          <td>Applications</td> 
+          <td>Suitable for browsing, streaming, and basic apps</td> 
+          <td>Suitable for advanced applications like IoT, 
+            autonomous vehicles, and remote surgery</td> 
+        </tr> 
+      </table>
+      
+      <p>In summary, while 4G is still a reliable and widely-used network standard, 
+        5G offers significant improvements in speed, latency, and device support, 
+        making it the better choice for modern, data-intensive applications.</p>
+    </div>
+  </div>
+
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <sub><b>References</b></sub><br>
+      <sub>Holslin, P. (2024, October 7). <i>4G vs. 5G: What's the Difference?</i>. HighSpeedInternet; HighSpeedInternet.
+        <a href="https://www.highspeedinternet.com/resources/4g-vs-5g">https://www.highspeedinternet.com/resources/4g-vs-5g</a></sub><br>
+      
+      <sub>Hudson, T. J. (2024, October 21). <i>5G vs. 4G: How Different Are They Really?</i>. How-To Geek; How-To Geek.
+        <a href="https://www.howtogeek.com/5g-vs-4g-how-different-are-they-really/">https://www.howtogeek.com/5g-vs-4g-how-different-are-they-really/</a></sub><br>
+
+      <sub>Jansen, M., & Beaton, P. (2019, April 30). <i>5G vs. 4G: Key differences between networks explained</i>. Digital Trends; Digital Trends.
+        <a href="https://www.digitaltrends.com/mobile/5g-vs-4g/">https://www.digitaltrends.com/mobile/5g-vs-4g/</a></sub><br>
+      
+      <sub>Verizon. (n.d.). <i>5G vs 4G: What Is 5G And How Is It Different From 4G?</i>. Verizon Business.
+        <a href="https://www.verizon.com/business/resources/articles/s/what-is-5g-and-how-is-it-different-from-4g/">
+        https://www.verizon.com/business/resources/articles/s/what-is-5g-and-how-is-it-different-from-4g/</a></sub><br>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>2024 Senior Capstone</p>
+      <p>Made by <a href="mailto:kaneses24@arizona.edu" target="_blank" class="no-underline">Kat Aneses</a></p>
+    </div>
+  </footer>
+
+    </div><!--End of Main-->
+
+
+    <script>
+      const toggleButton = document.getElementById('togglebutton'); 
+    
+      toggleButton.addEventListener('click', () => { 
+        document.body.classList.toggle('dark-mode'); 
+        if (document.body.classList.contains('dark-mode')) { 
+            localStorage.setItem('dark-mode', 'enabled'); 
+        } else { 
+            localStorage.removeItem('dark-mode'); 
+        } 
+      }); 
+    
+      function checkDarkMode() { 
+        if (localStorage.getItem('dark-mode') === 'enabled') { 
+            document.body.classList.add('dark-mode');
+            toggleButton.checked = true; 
+        } else {
+            document.body.classList.remove('dark-mode');
+            toggleButton.checked = false;
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', checkDarkMode);
+    </script>
+  </body>
+</html>
