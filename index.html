@@ -1,0 +1,397 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Explore 5G Education</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+    <style>
+      html,body,h1,h2,h3,h4,h5,h6 {font-family: "Rubik", sans-serif;}
+      .center{text-align: center;}
+      body p {line-height: 1.8;}
+      h1 {
+      color: #1e9d94;
+      transition: color 0.3s ease-in-out;
+      }
+      h2 {
+      color: #1e9d94;
+      transition: color 0.3s ease-in-out;
+      }
+      .no-underline { 
+      text-decoration: none; 
+      }
+
+      /*Dropdown Menu*/
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      li {
+        float: left;
+      }
+      li.right {
+      display: flex; 
+      align-items: center;
+      }
+      li a, .dropbtn, label {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      li a:hover, .dropdown:hover .dropbtn {
+        background-color: white;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      li.dropdown {
+        display: block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        transition: background-color 0.3s;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        transition: color 0.3s;
+      }
+      .dropdown-content a:hover {
+      background-color: #f1f1f1;
+      transition: background-color 0.3s;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /*Banner Image*/
+      .banner {
+      width: 100%;
+      height: 325px;
+      background-image: url('5G_Education.png');
+      background-repeat: no-repeat;
+      background-size: 26% 100%;
+      background-position: center;
+      background-color: #1e9d94;
+      }
+
+      /*Info Template*/
+      .info-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      /*Uploaded Images*/
+      .image1 {
+      width: 100%;
+      height: 350px;
+      background-image: url('HomeImage.png');
+      background-size: 100% 100%;
+      background-position: center;
+      }
+      .image2 {
+      width: 100%;
+      height: 350px;
+      background-image: url('5g-history.png');
+      background-size: 100% 100%;
+      background-position: center;
+      }
+
+      /*Dark Mode Switch*/
+      .switch {
+          position: relative;
+          display: inline-block;
+          width: 55px;
+          height: 26px;
+      }
+      /* Hide default HTML checkbox */
+      .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+      }
+      /* The slider */
+      .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #333333;
+          transition: .4s;
+          border-radius: 20px;
+      }
+      .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 3px;
+          bottom: 2px;
+          background-color: white;
+          transition: .4s;
+          border-radius: 50%;
+      }
+      input:checked + .slider {
+          background-color: #66d6cf;
+      }
+      input:checked + .slider:before {
+          transform: translateX(24px);
+      }
+      /* Rounded sliders */
+      .slider.round {
+          border-radius: 34px;
+      }
+      .slider.round:before {
+          border-radius: 50%;
+      }
+
+      /*Body + Nav in Dark Mode*/
+      ul {
+      background-color: black;
+      transition: background-color 0.3s;
+      }
+      .dark-mode ul {
+      background-color: #121212;
+      }
+      .dark-mode li a, .dark-mode .dropbtn {
+      color: #e0e0e0;
+      }
+      .dark-mode li a:hover, .dark-mode .dropdown:hover .dropbtn {
+      background-color: #333;
+      color: #ffffff;
+      }
+      .dark-mode .dropdown-content{
+      background-color: #333;
+      }
+      .dark-mode .dropdown-content a{
+      color: #e0e0e0;
+      }
+      .dark-mode .dropdown-content a:hover { 
+      background-color: #555;
+      }
+      
+      body {
+      background-color: white;
+      color: black;
+      transition: background-color 0.3s, color 0.3s;
+      }
+      .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+      }
+      .dark-mode .info-container {
+      box-shadow: 0 0 10px white;
+      }
+      .dark-mode h1, .dark-mode h2 {
+      color: #66d6cf;
+      }
+    </style>
+  </head>
+  <body onload="checkDarkMode()">
+    <div class="w3-top"><!--Navigation Bar-->
+        <div class="w3-theme w3-top w3-left-align w3-large">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="4gvs5g.html">4G vs 5G</a></li>
+                <li><a href="Impact.html">Impact</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Challenges</a>
+                    <div class="dropdown-content">
+                    <a href="DD.html">The Digital Divide</a>
+                    <a href="Security.html">Security Risks</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Use Cases</a>
+                    <div class="dropdown-content">
+                    <a href="VR.html">Virtual Reality (VR)</a>
+                    <a href="Learning.html">Remote & Hybrid Learning</a>
+                    </div>
+                </li>
+                <li><a href="Future.html">Future</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="FAQ.html">FAQs</a></li>
+               
+                <li class="right"> 
+                  <label class="switch"> 
+                    <input type="checkbox" id="togglebutton" class="w3-container w3-bar-item button w3-button w3-hide-small w3-hover-white">
+                    <span class="slider round"></span> 
+                  </label> 
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner"></div>
+
+    <div class="w3-main">
+
+        <div class="w3-row w3-padding-32">
+          <div class="w3-container info-container">
+            <h1 class="center">The Power of 5G: What You Need to Know</h1>
+            <div class="w3-container">
+              <p class="w3-border w3-padding-large w3-padding-32 w3-center image1"></p>
+              <p class="center"><sub>Image by: Microsoft. (2024). <i>Microsoft Copilot (Version 1.0)</i>. Microsoft. <a href="https://copilot.microsoft.com/">https://copilot.microsoft.com/</a></sub></p>
+            </div>
+            <h2>What is 5G?</h2>
+            <p>Launched back in 2019, 5G is known as the fifth generation wireless technology and is also the latest advancement 
+              in cellular network technology. It's designed to provide significantly faster data speeds, lower latency, and greater capacity 
+              compared to its predecessor, 4G. With peak speeds reaching up to 10 - 20 gigabits per second (Gbps), 5G networks can handle more 
+              connected devices simultaneously, making it ideal for densely populated areas and the growing Internet of Things (IoT). 
+              This technology is expected to support a wide range of applications, from enhanced mobile broadband to mission-critical services 
+              like remote surgery and autonomous vehicles. Now, while there's no exact telling when 5G will be fully available globally, 
+              it's expected that it will be available to the majority of the population well beyond 2020 (Qulacomm, n.d.).</p>
+
+            <h2>How Does it Work?</h2>
+            <p>5G networks are built on several advanced technologies that work together to provide its next-gen features. 
+              According to Nordrum et al. (2017), one of the key technologies is the use of millimeter waves (mmWave), 
+              which are higher frequency bands between 30 and 300 gigahertz (GHz). These waves allow for faster data transmission 
+              but have shorter range and are susceptible to obstacles. Fortunately, this can be overcome by using small cells, 
+              which are low-power base stations that cover small geographical areas. These are typically deployed in dense urban 
+              environments to enhance coverage and capacity by offloading traffic from larger macro cells. Another crucial technology 
+              is Massive MIMO (Multiple Input Multiple Output), which involves using multiple antennas at both the transmitter and 
+              receiver ends to increase the capacity and efficiency of data transmission. However, if more antennas were to be installed, 
+              then there will be an increase in interference. This is where beamforming, another important technology, comes in. 
+              In short, it focuses a wireless signal towards a specific device rather than broadcasting it in all directions, 
+              improving signal strength and reducing interference (Nordrum et al., 2017).</p>
+              
+              <p>Moreover, 5G requires high throughput and low latency which can be achieved through another technology called full duplex. 
+                This will allow for simultaneous transmission and reception of data in the same frequency, effectively doubling the capacity 
+                of networks (Nordrum et al., 2017). 5G also uses network slicing, which is a form of virtual network architecture that allows 
+                multiple virtual networks to be created on top of a common physical infrastructure (Flinders & Smalley, 2024), each slice 
+                being customized to meet the specific needs of different applications. Lastly, 5G relies on Orthogonal Frequency-Division Multiplexing (OFDM), 
+                which modulates digital signals across various channels to minimize interference. In addition to using the OFDM principles, 5G incorporates the 
+                5G New Radio (NR) air interface which enhances OFDM's flexibility and scalability. With this, it will allow 5G to provide 
+                more extensive coverage and support a broader range of use cases, reaching more people and connecting more devices effectively (Qualcomm, n.d.).</p>
+
+            <h2>Why is it Important?</h2>
+            <p>5G is positioned to revolutionize various industries and transform society by enabling new applications and services. 
+              Its high speeds and low latency are crucial for technologies like virtual reality (VR), augmented reality (AR), and autonomous vehicles, 
+              which require real-time data processing. 5G also has the potential to improve public safety and health services, such as smart cities 
+              and remote healthcare (GAO, 2020). Moreover, the increased capacity and efficiency of 5G networks can drive economic growth by supporting 
+              new business models and creating jobs. Overall, 5G is expected to be a cornerstone of the Fourth Industrial Revolution, bringing about 
+              significant advancements in connectivity and digital experiences (Verizon, 2019).</p>
+          </div>
+        </div>
+
+        <div class="w3-row w3-padding-32">
+          <div class="w3-container info-container">
+            <h1 class="center">The Brief History of 5G</h1>
+            <div class="w3-container">
+              <p class="w3-border w3-padding-large w3-padding-64 w3-center image2"></p>
+            </div>
+            <h2>Early Development</h2>
+              <p>The journey of 5G began in the early 2010s, with major telecommunications companies and research 
+                institutions laying the groundwork for this next-generation technology. Initial research focused on 
+                developing new radio frequencies, advanced modulation techniques, and improving spectral efficiency. 
+                By 2015, active preparations for 5G were underway, with the goal of achieving faster data speeds, lower latency, 
+                and higher device densities. A significant milestone in the development of 5G was the creation of the 5G New Radio (NR) 
+                by the 3rd Generation Partnership Project (3GPP). 5G NR is a radio access technology aimed at being the global 
+                standard for the 5G air interface. As mentioned before, it builds on orthogonal frequency-division multiplexing (OFDM), 
+                similar to what 4G LTE uses, but includes major enhancements to meet the varied needs of 5G. 
+                Additionally, the 3GPP specification 38 series details the technical aspects of 5G NR, 
+                positioning it as the successor to LTE.</p>
+
+                <p>The study of 5G NR within 3GPP started in 2015, with the first specification released by the end of 2017. 
+                  During the ongoing standardization process, the industry began developing infrastructure in line with draft 
+                  standards, leading to the first large-scale commercial launch of 5G NR at the end of 2018. Ultimately setting the 
+                  stage for 5G's commercial deployment.</p>
+
+            <h2>Initial Deployment</h2>
+              <p>The first commercial 5G networks were launched in 2019. Verizon was the pioneer, rolling out 5G services in select 
+                areas of Chicago and Minneapolis, expanding its service a bit later to several other cities (Hollington, 2022). 
+                Other major carriers like Sprint, AT&T, and T-Mobile followed suit, expanding their 5G networks throughout the year. 
+                These early deployments primarily utilized high-frequency millimeter-wave (mmWave) technology, which offered 
+                impressive speeds but had limited coverage due to its short range.</p>
+
+            <h2>Global Spread</h2>
+              <p>By 2020, 5G technology began to spread globally, with many countries launching their own 5G networks. 
+                The technology continued to evolve, incorporating a mix of low-band, mid-band, and high-band frequencies to 
+                balance speed and coverage. As of now, 5G networks are being deployed worldwide, supporting a wide range of 
+                applications from enhanced mobile broadband to the Internet of Things (IoT) and mission-critical services.</p>
+          </div>
+        </div>
+
+        <footer id="myFooter">
+          <div class="w3-container w3-theme-l2 w3-padding-24">
+            <sub><b>References</b></sub><br>
+            <sub>Contributors to Wikimedia projects. (2024, September 13). <i>5G</i>. Wikipedia; Wikimedia Foundation, Inc. 
+              <a href="https://en.wikipedia.org/wiki/5G#">https://en.wikipedia.org/wiki/5G#</a></sub><br>
+
+            <sub>Flinders, M., & Smalley, I. (2024, February 20). <i>What is 5G?</i> IBM. <a href="https://www.ibm.com/topics/5g">https://www.ibm.com/topics/5g</a></sub><br>
+
+            <sub>Hollington, J. (2022, August 6). <i>When did 5G come out? The complicated history of its release</i>. Digital Trends; Digital Trends. 
+              <a href="https://www.digitaltrends.com/mobile/when-did-5g-come-out-complicated-history-release/">https://www.digitaltrends.com/mobile/when-did-5g-come-out-complicated-history-release/</a></sub><br>
+            
+            <sub>Nordrum, A., Clark, K., & IEEE Spectrum. (2017, January 27). <i>Everything You Need to Kow About 5G</i>. IEEE Spectrum; IEEE Spectrum.
+              <a href="https://spectrum.ieee.org/everything-you-need-to-know-about-5g">https://spectrum.ieee.org/everything-you-need-to-know-about-5g</a></sub><br>
+            
+            <sub>Qualcomm. (n.d.). <i>What is 5G? | Everything You Need to Know</i>. Qualcomm. Retrieved September 27, 2024, from
+              <a href="https://www.qualcomm.com/5g/what-is-5g">https://www.qualcomm.com/5g/what-is-5g</a></sub><br>
+
+            <sub>U.S. GAO. (2020, December 14). <i>What is 5G and Why Does It Matter?</i> U.S. Government Accountability Office (U.S. GAO).
+              <a href="https://www.gao.gov/blog/what-5g-and-why-does-it-matter?">https://www.gao.gov/blog/what-5g-and-why-does-it-matter?</a></sub><br>
+            
+            <sub>Verizon. (2019, November 5). <i>Why is 5G Technology Important?</i> Verizon.
+              <a href="https://www.verizon.com/about/our-company/5g/why-5g-important-discover-importance-5g-technology?">
+              https://www.verizon.com/about/our-company/5g/why-5g-important-discover-importance-5g-technology?</a></sub>
+          </div>
+
+          <div class="w3-container w3-theme-l1">
+            <p>2024 Senior Capstone</p>
+            <p>Made by <a href="mailto:kaneses24@arizona.edu" target="_blank" class="no-underline">Kat Aneses</a></p>
+          </div>
+        </footer>
+      
+    </div><!--End of Main-->
+
+    <script>
+    const toggleButton = document.getElementById('togglebutton'); 
+    
+    toggleButton.addEventListener('click', () => { 
+      document.body.classList.toggle('dark-mode'); 
+      if (document.body.classList.contains('dark-mode')) { 
+          localStorage.setItem('dark-mode', 'enabled'); 
+      } else { 
+          localStorage.removeItem('dark-mode'); 
+      } 
+    }); 
+    
+    function checkDarkMode() { 
+      if (localStorage.getItem('dark-mode') === 'enabled') { 
+          document.body.classList.add('dark-mode');
+          toggleButton.checked = true; 
+      } else {
+          document.body.classList.remove('dark-mode');
+          toggleButton.checked = false;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', checkDarkMode); 
+    </script>
+  </body>
+</html>
